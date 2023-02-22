@@ -1,15 +1,26 @@
 import React from "react";
-import "../../styles/parameters-header.css";
-
+import "../../styles/parameters-header.scss";
+import {MdOutlineModeEdit} from 'react-icons/md'
+import {HiOutlineTrash, HiOutlineCog} from 'react-icons/hi'
 const ParametersHeader = () => {
   return (
-    <div className="parameters-header bg-white p-8 rounded-[32px] w-[1140px] h-[200px]">
-      <div className="parameters-nav flex gap-5 items-center">
-        <button className="font-bold px-2 py-4 border-b-2 border-primary">
-          My Parameters
-        </button>
-        <button className="font-normal px-2 py-4 transition-all duration-300 border-b-2 border-[transparent] hover:border-b-2 hover:border-primary">Public</button>
-        <button className="font-normal px-2 py-4 transition-all duration-300 border-b-2 border-[transparent] hover:border-b-2 hover:border-primary">Configurations</button>
+    <div className="parameters-header">
+      <div className="parameters-header__nav">
+        <button className="parameters-header__btn active">My Parameters</button>
+        <button className="parameters-header__btn">Public</button>
+        <button className="parameters-header__btn">Configurations</button>
+      </div>
+      <div className="parameters-header__actions">
+        <h4 className="parameters-header__headline">My Parameters</h4>
+        <div className="parameters-header__actions-buttons">
+          <button><MdOutlineModeEdit size='20' /> <span className="pl-1">Edit</span></button>
+          <button><HiOutlineTrash size='20' /> <span className="pl-1">Delete</span></button>
+          <button className="active">Add parameter</button>
+        </div>
+      </div>
+      <div className="parameters-header__search">
+        <input type="search" name="search" id="search" placeholder="Search" className="parameters-header__search-input"/>
+        <button><HiOutlineCog size='24' /></button>
       </div>
     </div>
   );
