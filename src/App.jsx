@@ -1,4 +1,6 @@
 import ParametersHeader from "./components/modules/ParametersHeader"
+import "./styles/main.scss";
+
 
 function App() {
   return (

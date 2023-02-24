@@ -42,8 +42,12 @@
         @apply flex items-center;
     }
 
+    &__search-icon{
+        @apply absolute top-3 left-3;
+    }
+
     &__search-input{
-        @apply w-full px-2 py-2 mr-4 sm:p-3 rounded-md border border-border focus:outline-none focus:shadow-sm focus:border-border; 
+        @apply w-full px-2 py-2 mr-4 sm:pl-11 sm:p-3 rounded-md border border-border focus:outline-none focus:shadow-sm focus:border-border; 
     }
 }
 
