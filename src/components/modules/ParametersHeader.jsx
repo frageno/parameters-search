@@ -7,9 +7,12 @@ const ParametersHeader = () => {
 
   const [isActive, setIsActive] = useState(false);
 
-  const addParametrHandler = (e) => {
-    setIsActive(true);;
+  const addParametrHandler = (item) => {
+    console.log(item);
+    setIsActive(true);
   }
+
+  console.log(isActive);
 
 
   return (
@@ -46,9 +49,7 @@ const ParametersHeader = () => {
           <li className="font-medium border-b border-border py-3">#1 First parametr</li>
         </ul>
       </div>
-      <div className={`${isActive ? 'block w-full h-full transition-all duration-300' : 'hidden'}`}>
-        <Modal/>
-      </div>
+        <Modal isActive={isActive} addParametrHandler={addParametrHandler}/>
     </div>
 
   );
